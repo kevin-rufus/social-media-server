@@ -1,0 +1,43 @@
+{
+  "name": "graphql-social-media-app",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "start:prod": "cross-env NODE_ENV=production nodemon",
+    "start:dev": "cross-env NODE_ENV=development nodemon",
+    "seeds": "node scripts/seeds",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kevin Rufus",
+  "license": "ISC",
+  "dependencies": {
+    "@graphql-tools/schema": "^10.0.2",
+    "apollo-server-express": "^3.13.0",
+    "bcrypt": "^5.1.1",
+    "crypto": "^1.0.1",
+    "express": "^4.18.2",
+    "graphql": "^16.8.1",
+    "graphql-middleware": "^6.1.35",
+    "graphql-shield": "^7.6.5",
+    "jsonwebtoken": "^9.0.2",
+    "sequelize": "^6.35.2",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.0.2"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/node_modules/**"
+    ],
+    "delay": 1000,
+    "watch": [
+      "src/**/*.js"
+    ],
+    "ext": "ts,js,mjs,json",
+    "verbose": false,
+    "exec": "node src/app.js"
+  }
+}
